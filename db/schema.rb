@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_103935) do
     t.string "duration"
     t.string "director"
     t.integer "year_of_creation", default: 1900
-    t.text "genre", default: [], array: true
+    t.text "genres", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_movies_on_title"

@@ -6,7 +6,7 @@ class CreateMovies < ActiveRecord::Migration[7.1]
       t.string :duration
       t.string :director
       t.integer :year_of_creation, default: 1900
-      t.text :genre, array: true, default: []
+      t.text :genres, array: true, default: []
 
       t.timestamps
     end

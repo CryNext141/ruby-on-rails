@@ -1,0 +1,8 @@
+<h1>Show movie</h1>
+<h2 >Title: <%= @movie.title %></h2>
+<h3>Description: <%= @movie.description %></h3>
+<p>Duration: <%= @movie.duration %></p>
+<p>Director: <%= @movie.director %></p>
+<p>Year of Creation: <%= @movie.year_of_creation %></p>
+<p>Genre: <%= @movie.genres %></p>
+<p><%= link_to 'Edit', edit_movie_path(@movie) %></p>
