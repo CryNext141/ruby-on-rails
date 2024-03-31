@@ -6,3 +6,6 @@
 <p>Year of Creation: <%= @movie.year_of_creation %></p>
 <p>Genre: <%= @movie.genres %></p>
 <p><%= link_to 'Edit', edit_movie_path(@movie) %></p>
+
+
+<%= render 'movies/shared/comment', movie: @movie %>

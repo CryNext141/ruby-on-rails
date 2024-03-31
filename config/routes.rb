@@ -13,6 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :movies do
-    resources :comments, only: :create
-  end
+    resources :comments  end
 end

@@ -44,6 +44,7 @@ class MoviesController < ApplicationController
 
   # DELETE /movies/:id
   def destroy
+
   end
 
   def movie_params
