@@ -8,9 +8,9 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to @movie, notice: "Comment created successfully."
+      redirect_to @movie, notice: "Comment created successfully"
     else
-      redirect_to @movie, alert: "Failed to create comment."
+      redirect_to @movie, alert: "Failed to create comment"
       flash[:error] = @comment.errors.full_messages.join(', ')
     end
   end
@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
   def update
     @comment.assign_attributes(comment_params)
     if @comment.save
-      redirect_to @comment.commentable
+      redirect_to @comment.commentable, notice: "Comment updated successfully"
     else
       flash[:allert] = @comment.errors.full_messages.join(', ')
       render :edit

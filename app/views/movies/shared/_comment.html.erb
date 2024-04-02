@@ -1,21 +1,22 @@
 <h2>Comments:</h2>
 <% movie.comments.includes(:user).each do |comment| %>
   <div class="comment">
-
     <p>
       <%= comment.body %>
+      <br />
       <small> Posted by <%= comment.user.email %> | <%= time_ago_in_words(comment.created_at) %> ago</small>
+
+      <% if policy(comment).edit? %>
+        <br />
+        <%= link_to 'edit', edit_movie_comment_path(comment, movie_id: comment.commentable.id)  %>
+      <% end %>
+
     </p>
-
-    <% if policy(comment).edit? %>
-      <%= link_to 'edit', edit_movie_comment_path(comment, movie_id: comment.commentable.id)  %>
-    <% end %>
-
   </div>
 <% end %>
 
 <%= form_with(model: [movie, movie.comments.build], local: true) do |form| %>
   <%= form.hidden_field :movie_id, value: movie.id %>
   <%= form.text_area :body %>
-  <%= form.submit "Add Comment" %>
+  <%= form.submit %>
 <% end %>

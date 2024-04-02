@@ -1,0 +1,10 @@
+<h1>Edit Comment</h1>
+
+<%= form_for @comment, url: movie_comment_path(@comment, movie_id: @comment.commentable.id), method: :patch do |form| %>
+  <div class="field">
+    <%= form.text_area :body, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
