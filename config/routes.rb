@@ -13,5 +13,10 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :movies do
-    resources :comments  end
+    collection do
+      get :omdb_search
+      post :omdb_import
+    end
+    resources :comments
+  end
 end

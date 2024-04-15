@@ -109,9 +109,16 @@ GEM
       warden (~> 1.2.3)
     drb (2.2.1)
     erubi (1.12.0)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.3)
       concurrent-ruby (~> 1.0)
       racc (~> 1.7)
@@ -139,7 +146,10 @@ GEM
     mini_mime (1.1.5)
     minitest (5.22.2)
     msgpack (1.7.2)
+    multi_xml (0.6.0)
     mutex_m (0.2.0)
+    net-http (0.4.1)
+      uri
     net-imap (0.4.10)
       date
       net-protocol
@@ -236,6 +246,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (0.13.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)
@@ -265,6 +276,8 @@ DEPENDENCIES
   capybara
   debug
   devise
+  faraday (~> 2.9)
+  httparty
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -281,7 +294,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.4p191
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.2.27

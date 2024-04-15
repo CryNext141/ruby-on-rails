@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OMDB Search</title>
+</head>
+<body>
+<h1>Search for Movies via OMDB</h1>
+<form action="/movies/omdb_search" method="get">
+  <label for="search_query">Search Query:</label>
+  <input type="text" id="search_query" name="search_query">
+  <button type="submit">Search</button>
+</form>
+
+<% if @search_result %>
+  <ul>
+    <% @search_result.each do |movie| %>
+      <li>
+        <%= movie['Title'] %> - <%= movie['Year'] %>
+        <% if movie['Poster'] != 'N/A' %>
+          <%= image_tag(movie['Poster']) %>
+        <% else %>
+          <%= image_tag('movie-poster-credits-178.jpg', alt: 'Default Image') %>
+
+      <% end %>
+        <form action="/movies/omdb_import" method="post">
+          <input type="hidden" name="omdb_id" value="<%= movie['imdbID'] %>">
+          <button type="submit">Import This Movie</button>
+        </form>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+</body>
+</html>

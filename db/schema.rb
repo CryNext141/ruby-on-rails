@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_22_124051) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_03_133240) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_22_124051) do
     t.text "genres", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cover_image_url"
     t.index ["title"], name: "index_movies_on_title"
   end
 
