@@ -1,4 +1,6 @@
 <h1 class="page-title">Show movie</h1>
+
+
 <h2 class="show-movie-name">
   <span class="show-movie-label"><%= @movie.title%></span>
 </h2>
@@ -16,8 +18,12 @@
     <p>Genre: <%= @movie.genres %></p>
   </div>
 
-  <%= link_to 'Edit', edit_movie_path(@movie), class: "edit-button" %>
-  <p><%= link_to 'Delete Movie', movie_path(@movie), method: :delete, class: "delete-button" %></p>
+  <div class="movie-e-button">
+    <%= link_to 'Edit', edit_movie_path(@movie), class: "edit-button" %>
+  </div>
+  <div class="movie-d-button">
+    <%= link_to 'Delete Movie', movie_path(@movie), method: :delete, class: "delete-button" %>
+  </div>
 
   <%= render 'movies/shared/comment', movie: @movie %>
 </div>

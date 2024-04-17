@@ -15,6 +15,73 @@ html, body {
     color: var(--text-color);
     border: none;
 }
+
+.edit-button{
+    color: #414eff;
+    text-decoration: none;
+    border: 2px solid #e2e1ef;
+    padding: 3px 15px;
+    border-radius: 10px;
+    background-position: center;
+    transition: background 0.3s;
+}
+.edit-button:hover{
+    background: #e2e1ef radial-gradient(circle, transparent 1%, #e2e1ef 1%) center/15000%;
+}
+
+.edit-button:active {
+    background-color: #fff;
+    background-size: 100%;
+    transition: background 0s;
+}
+.movie-e-button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.delete-button{
+    color: #414eff;
+    text-decoration: none;
+    border: 2px solid #e2e1ef;
+    padding: 3px 15px;
+    border-radius: 10px;
+    background-position: center;
+    transition: background 0.3s;
+}
+.delete-button:hover{
+    background: #e2e1ef radial-gradient(circle, transparent 1%, #e2e1ef 1%) center/15000%;
+}
+.delete-button:active {
+    background-color: #fff;
+    background-size: 100%;
+    transition: background 0s;
+}
+.movie-d-button{
+    margin-bottom: 15px;
+}
+
+.edit-comment-button{
+    color: #414eff;
+    text-decoration: none;
+    border: 2px solid #e2e1ef;
+    padding: 3px 15px;
+    border-radius: 10px;
+    background-position: center;
+    transition: background 0.3s;
+}
+.edit-comment-button:hover{
+    background: #e2e1ef radial-gradient(circle, transparent 1%, #e2e1ef 1%) center/15000%;
+}
+.edit-comment-button:active {
+    background-color: #fff;
+    background-size: 100%;
+    transition: background 0s;
+}
+.edit-c-button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .header {
     background-color: #13131b;
     padding: 20px;
@@ -97,3 +164,6 @@ html, body {
     color: var(--text-color);
 }
 
+.form-name{
+    color: white;
+}

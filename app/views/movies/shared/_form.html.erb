@@ -1,33 +1,37 @@
-<%= form_for movie, html: { class: "movie-form" } do |form| %>
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-input" %>
-  </div>
+<div class="movie-edit-info">
+  <%= form_for movie, html: { class: "movie-form" } do |form| %>
 
-  <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, class: "form-input" %>
-  </div>
+    <div class="form-group">
+      <%= form.label :title, class: "form-name"%>
+      <%= form.text_field :title, class: "form-input" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :duration %>
-    <%= form.text_field :duration, class: "form-input" %>
-  </div>
+    <div class="form-group">
+      <%= form.label :description, class: "form-name" %>
+      <%= form.text_area :description, class: "form-input" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :director %>
-    <%= form.text_field :director, class: "form-input" %>
-  </div>
+    <div class="form-group">
+      <%= form.label :duration, class: "form-name" %>
+      <%= form.text_field :duration, class: "form-input" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :year_of_creation %>
-    <%= form.number_field :year_of_creation, class: "form-input" %>
-  </div>
+    <div class="form-group">
+      <%= form.label :director, class: "form-name" %>
+      <%= form.text_field :director, class: "form-input" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :genres %>
-    <%= form.select :genres, Movie::GENRES, multiple: true, class: "form-input" %>
-  </div>
+    <div class="form-group">
+      <%= form.label :year_of_creation, class: "form-name"%>
+      <%= form.number_field :year_of_creation, class: "form-input" %>
+    </div>
 
-  <%= form.submit class: "btn" %>
-<% end %>
+    <div class="form-group">
+      <%= form.label :genres, class: "form-name"%>
+      <%= form.select :genres, Movie::GENRES, multiple: true, class: "form-input" %>
+    </div>
+
+    <%= form.submit class: "btn" %>
+  <% end %>
+</div>
+
