@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://127.0.0.1:3000/movies -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Film Tracker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="2USnwL-8Ql0tYlG0K_ZaQB8gYTSwQB45Wrvgo9_ZOnQDySimhR3C-NfqSMWUeeMMkcavD1uyHS8Kg6YXyQpT8w">
+  
+
+  <link rel="stylesheet" href="./Film Tracker_files/application-664717379c61d586e191d3439e2167b4e8e0fcf5cb2527be3b1c19cbaeb6158c.css" data-turbo-track="reload">
+  <link rel="stylesheet" href="./Film Tracker_files/custom-5bf2acae0392b34d7dd866bf553519892e8173792f70675d2fd3e7c4fe48d3f2.css" media="all" data-turbolinks-track="reload">
+
+  <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-2bf31b7615dda9b811fdf059f07d0cdefb9f3168d5d8354a112b1d3b4daba293.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-c6325b8b56619b34aa6e0f34dfed82b010fe049f81b320a4cd0e2d99d3245118.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js",
+    "@rails/ujs": "/assets/rails-ujs-7910fbc642fb718c5e4cfb389a32582be19f6d5dc242d30a330fd0552b0030a8.js",
+    "controllers/application": "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js"
+  }
+}</script>
+<link rel="modulepreload" href="http://127.0.0.1:3000/assets/application-2bf31b7615dda9b811fdf059f07d0cdefb9f3168d5d8354a112b1d3b4daba293.js">
+<link rel="modulepreload" href="http://127.0.0.1:3000/assets/turbo.min-c6325b8b56619b34aa6e0f34dfed82b010fe049f81b320a4cd0e2d99d3245118.js">
+<link rel="modulepreload" href="http://127.0.0.1:3000/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js">
+<link rel="modulepreload" href="http://127.0.0.1:3000/assets/rails-ujs-7910fbc642fb718c5e4cfb389a32582be19f6d5dc242d30a330fd0552b0030a8.js">
+<link rel="modulepreload" href="http://127.0.0.1:3000/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js">
+<link rel="modulepreload" href="http://127.0.0.1:3000/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js">
+<link rel="modulepreload" href="http://127.0.0.1:3000/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js">
+<script type="module">import "application"</script></head>
+
+<body>
+<div class="header">
+  <div class="header-button">
+      <a data-turbo-method="delete" rel="nofollow" data-method="delete" href="http://127.0.0.1:3000/users/sign_out">Log Out</a>
+      <a href="http://127.0.0.1:3000/movies/new">Create Movie</a>
+      <a href="http://127.0.0.1:3000/movies/omdb_search">Search OMDB</a>
+      <a href="http://127.0.0.1:3000/movies">All Movies</a>
+      <a href="http://127.0.0.1:3000/movies/search">Search movie</a>
+
+  </div>
+
+</div>
+
+
+
+
+<div class="container">
+  
+<h1 class="movie-list">All movies</h1>
+
+  <h2 class="movie-name"><a href="http://127.0.0.1:3000/movies/5">Blade Runner 2049</a></h2>
+  <h3 class="movie-description">
+    <span class="description-label">Description:</span>
+    Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.
+  </h3>
+  <div class="movie-info">
+    <p>Duration: 164 min</p>
+    <p>Director: Denis Villeneuve</p>
+    <p>Year of Creation: 2017</p>
+    <p>Genre: ["Action", "Drama", "Mystery"]</p>
+  </div>
+  <h2 class="movie-name"><a href="http://127.0.0.1:3000/movies/7">Alien</a></h2>
+  <h3 class="movie-description">
+    <span class="description-label">Description:</span>
+    The crew of a commercial spacecraft encounters a deadly lifeform after investigating a mysterious transmission of unknown origin.
+  </h3>
+  <div class="movie-info">
+    <p>Duration: 117 min</p>
+    <p>Director: Ridley Scott</p>
+    <p>Year of Creation: 1979</p>
+    <p>Genre: ["Horror", "Sci-Fi"]</p>
+  </div>
+  <h2 class="movie-name"><a href="http://127.0.0.1:3000/movies/8">Alien³</a></h2>
+  <h3 class="movie-description">
+    <span class="description-label">Description:</span>
+    Returning from LV-426, Ellen Ripley crash-lands on the maximum-security prison Fiorina 161, where she discovers that she has unwittingly brought along an unwelcome visitor.
+  </h3>
+  <div class="movie-info">
+    <p>Duration: 114 min</p>
+    <p>Director: David Fincher</p>
+    <p>Year of Creation: 1992</p>
+    <p>Genre: ["Action", "Horror", "Sci-Fi"]</p>
+  </div>
+  <h2 class="movie-name"><a href="http://127.0.0.1:3000/movies/4">Guardians of the Galaxy</a></h2>
+  <h3 class="movie-description">
+    <span class="description-label">Description:</span>
+    A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.
+  </h3>
+  <div class="movie-info">
+    <p>Duration: 121 min</p>
+    <p>Director: James Gunn</p>
+    <p>Year of Creation: 2014</p>
+    <p>Genre: ["", "comedy"]</p>
+  </div>
+
+</div>
+
+</body></html>

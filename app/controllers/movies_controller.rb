@@ -67,8 +67,6 @@ class MoviesController < ApplicationController
     end
   end
 
-
-
   def omdb_search
     puts "Search query: #{params[:search_query]}"
     if params[:search_query].present?

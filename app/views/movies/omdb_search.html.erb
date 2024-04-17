@@ -5,11 +5,11 @@
   <title>OMDB Search</title>
 </head>
 <body>
-<h1>Search for Movies via OMDB</h1>
+<h1 class="page-title">Search for Movies via OMDB</h1>
 <form action="/movies/omdb_search" method="get">
   <label for="search_query">Search Query:</label>
   <input type="text" id="search_query" name="search_query">
-  <button type="submit">Search</button>
+  <button class="btn" type="submit">Search</button>
 </form>
 
 <% if @search_result %>
@@ -25,7 +25,7 @@
       <% end %>
         <form action="/movies/omdb_import" method="post">
           <input type="hidden" name="omdb_id" value="<%= movie['imdbID'] %>">
-          <button type="submit">Import This Movie</button>
+          <button class="btn" type="submit">Import This Movie</button>
         </form>
       </li>
     <% end %>

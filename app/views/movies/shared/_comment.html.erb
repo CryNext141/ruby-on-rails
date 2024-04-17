@@ -1,4 +1,4 @@
-<h2>Comments:</h2>
+<h2 class="comment-label">Comments:</h2>
 <% movie.comments.includes(:user).each do |comment| %>
   <div class="comment">
     <p>
@@ -18,5 +18,5 @@
 <%= form_with(model: [movie, movie.comments.build], local: true) do |form| %>
   <%= form.hidden_field :movie_id, value: movie.id %>
   <%= form.text_area :body %>
-  <%= form.submit %>
+  <%= form.submit class: "btn"%>
 <% end %>
