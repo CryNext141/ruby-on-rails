@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
     "@picocss/pico": "^2.0.6",
     "@rails/webpacker": "5.4.4",
     "webpack": "^4.46.0",

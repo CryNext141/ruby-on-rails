@@ -82,6 +82,45 @@ html, body {
     margin-bottom: 15px;
 }
 
+.login-title{
+    margin-top: 10px;
+    margin-bottom: -25px;
+    color: white;
+}
+.remember-checkbox{
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+.login-button{
+    margin-top: 60px;
+}
+
+.reg-button{
+    background-color: rgba(173, 173, 184, 0.82);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+.reg-button:hover{
+    background-color: rgb(173, 173, 184);
+}
+
+.forgot-pass-button{
+    color: white;
+    text-decoration: none;
+}
+.forgot-pass-button:hover{
+    color: #0ab1b1;
+}
+.forgot-pass-div{
+    margin-top: 10px;
+}
+.login-form{
+    margin-bottom: 20px;
+}
+
 .header {
     background-color: #13131b;
     padding: 20px;
