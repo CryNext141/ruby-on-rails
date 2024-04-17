@@ -48,6 +48,8 @@ gem "bootsnap", require: false
 gem 'pundit'
 gem 'faraday', '~> 2.9'
 gem 'httparty'
+gem 'rails-ujs'
+gem 'webpacker'
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]

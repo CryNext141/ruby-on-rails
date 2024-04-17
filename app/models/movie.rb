@@ -16,4 +16,8 @@ class Movie < ApplicationRecord
       errors.add(:genres, 'At least one must be selected')
     end
   end
+
+  def self.search(query)
+    where("title ILIKE ? OR director ILIKE ? OR ? = ANY(genres)", "%#{query}%", "%#{query}%", query)
+  end
 end

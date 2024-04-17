@@ -5,6 +5,14 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
+  def search
+    if params[:query].present?
+      @movies = Movie.search(params[:query])
+    else
+      @movies = []
+    end
+  end
+
   # GET /movies/:id
   def show
     @movie = Movie.find(params[:id])
@@ -47,9 +55,18 @@ class MoviesController < ApplicationController
   end
 
   # DELETE /movies/:id
+  # DELETE /movies/:id
   def destroy
-
+    @movie = Movie.find(params[:id])
+    if @movie.destroy
+      flash[:notice] = 'Movie was successfully deleted.'
+      redirect_to movies_path
+    else
+      flash[:alert] = 'Error deleting movie.'
+      redirect_to @movie
+    end
   end
+
 
 
   def omdb_search

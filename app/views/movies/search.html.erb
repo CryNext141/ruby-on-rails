@@ -1,0 +1,21 @@
+<h1>Search Movies</h1>
+
+<%= form_with(url: search_movies_path, method: :get, local: true) do %>
+  <%= label_tag :query, "Search" %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<% if params[:query].present? %>
+  <% if @movies.any? %>
+    <ul>
+      <% @movies.each do |movie| %>
+        <li>
+          <%= link_to movie.title, movie_path(movie) %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No movies found</p>
+  <% end %>
+<% end %>
