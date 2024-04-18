@@ -3,6 +3,12 @@
 <div class="all-movie">
   <% @movies.each do |movie| %>
     <h2 class="movie-name"><%= link_to movie.title, movie_path(movie) %></h2>
+
+    <!-- Додаємо постер фільму -->
+    <div class="movie-poster">
+      <%= image_tag(movie.cover_image_url.presence || 'movie-poster-credits-178.jpg', alt: movie.title) %>
+    </div>
+
     <h3 class="movie-description">
       <span class="description-label">Description:</span>
       <%= movie.description %>

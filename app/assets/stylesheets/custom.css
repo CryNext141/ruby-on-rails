@@ -16,7 +16,9 @@ html, body {
     border: none;
 }
 .btn:hover{
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     background-color: #6582FF;
+
 
 }
 button.movie-import-btn, input.movie-import-btn[type="submit"] {
@@ -30,6 +32,7 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
     border: none;
 }
 .movie-import-btn:hover{
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     background-color: #4164ef;
 }
 
@@ -139,7 +142,7 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
 }
 
 .header {
-    background-color: rgba(19, 19, 27, 0.9);
+    background-color: rgba(19, 19, 27, 0.7);
     padding: 20px;
     text-align: right;
     font-size: 24px;
@@ -192,7 +195,7 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
 
 .movie-name :hover {
     background-color: #2f303a;
-    box-shadow: 2px 2px 5px #020202;
+    box-shadow: 2px 2px 5px rgba(2, 2, 2, 0.37);
 }
 .description-label {
     font-size: 25px;

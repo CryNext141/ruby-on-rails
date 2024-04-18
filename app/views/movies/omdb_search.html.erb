@@ -11,7 +11,6 @@
   <input type="text" id="search_query" name="search_query">
   <button class="btn" type="submit">Search</button>
 </form>
-
 <% if @search_result %>
   <ul>
     <% @search_result.each do |movie| %>
@@ -28,7 +27,6 @@
             <% end %>
           </div>
         </div>
-
         <form action="/movies/omdb_import" method="post">
           <input type="hidden" name="omdb_id" value="<%= movie['imdbID'] %>">
           <button class="movie-import-btn" type="submit">Import This Movie</button>
