@@ -1,5 +1,4 @@
 import { Application } from "@hotwired/stimulus"
-import { useLoading } from "@hotwired/stimulus-loading"
 
 
 const application = Application.start()

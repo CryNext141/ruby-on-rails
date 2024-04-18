@@ -11,9 +11,26 @@ html, body {
 }
 
 .btn{
-    background-color: #2f303a;
+    background-color: #0028d4;
     color: var(--text-color);
     border: none;
+}
+.btn:hover{
+    background-color: #6582FF;
+
+}
+button.movie-import-btn, input.movie-import-btn[type="submit"] {
+    width: 200px; !important;
+}
+
+
+.movie-import-btn{
+    background-color: #6582FF;
+    color: var(--text-color);
+    border: none;
+}
+.movie-import-btn:hover{
+    background-color: #4164ef;
 }
 
 .edit-button{
@@ -40,7 +57,7 @@ html, body {
 }
 
 .delete-button{
-    color: #414eff;
+    color: #f30202;
     text-decoration: none;
     border: 2px solid #e2e1ef;
     padding: 3px 15px;
@@ -150,6 +167,17 @@ html, body {
     transition: background-color 0.3s ease;
     text-decoration: none;
 }
+
+.search-m-title{
+    color: var(--text-color);
+    font-size: 30px;
+    text-decoration: none;
+}
+.search-m-title:hover{
+    color: #0ab1b1;
+}
+
+
 .movie-name p{
      color: var(--p-title);
 }
@@ -205,4 +233,18 @@ html, body {
 
 .form-name{
     color: white;
+}
+
+.movie-details{
+    margin-top: 30px;
+    color: var(--text-color);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.movie-poster img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
 }

@@ -1,7 +1,7 @@
 <h1 class="page-title">Search Movies</h1>
 
 <%= form_with(url: search_movies_path, method: :get, local: true) do %>
-  <%= label_tag :query, "Search" %>
+  <%= label_tag :query, "Search", style: "color: #e2e1ef;" %>
   <%= text_field_tag :query, params[:query] %>
   <%= submit_tag "Search", name: nil, class: "btn" %>
 <% end %>
@@ -11,11 +11,11 @@
     <ul>
       <% @movies.each do |movie| %>
         <li>
-          <%= link_to movie.title, movie_path(movie) %>
+          <%= link_to movie.title, movie_path(movie), class: 'search-m-title'%>
         </li>
       <% end %>
     </ul>
   <% else %>
-    <p>No movies found</p>
+    <p style="color: #e2e1ef;">No movies found</p>
   <% end %>
 <% end %>
