@@ -29,8 +29,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy!
+    @comment.destroy
+    redirect_to @comment.commentable, notice: 'Comment was successfully deleted.'
   end
+
 
   private
 

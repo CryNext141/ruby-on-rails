@@ -97,6 +97,21 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
     background-size: 100%;
     transition: background 0s;
 }
+
+.delete-comment-button{
+    color: #7261ff;
+    text-decoration: none;
+    border: 2px solid #e2e1ef;
+    padding: 3px 15px;
+    border-radius: 10px;
+    background-position: center;
+    transition: background 0.3s;
+}
+
+.delete-comment-button:hover{
+    background: #e2e1ef radial-gradient(circle, transparent 1%, #e2e1ef 1%) center/15000%;
+
+}
 .edit-c-button{
     margin-top: 15px;
     margin-bottom: 15px;
