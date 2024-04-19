@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>OMDB Search</title>
+  <style>
+      .movie-form {
+          border-bottom: 1px solid #13131b;
+          padding: 10px 0;
+      }
+  </style>
 </head>
 <body>
 <h1 class="page-title">Search Movies via OMDB</h1>
@@ -27,7 +33,7 @@
             <% end %>
           </div>
         </div>
-        <form action="/movies/omdb_import" method="post">
+        <form action="/movies/omdb_import" method="post" class="movie-form">
           <input type="hidden" name="omdb_id" value="<%= movie['imdbID'] %>">
           <button class="movie-import-btn" type="submit">Import This Movie</button>
         </form>

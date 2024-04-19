@@ -2,22 +2,15 @@
 
 <div class="all-movie">
   <% @movies.each do |movie| %>
-    <h2 class="movie-name"><%= link_to movie.title, movie_path(movie) %></h2>
-
-    <!-- Додаємо постер фільму -->
-    <div class="movie-poster">
-      <%= image_tag(movie.cover_image_url.presence || 'movie-poster-credits-178.jpg', alt: movie.title) %>
-    </div>
-
-    <h3 class="movie-description">
-      <span class="description-label">Description:</span>
-      <%= movie.description %>
-    </h3>
-    <div class="movie-info">
-      <p>Duration: <%= movie.duration %></p>
-      <p>Director: <%= movie.director %></p>
-      <p>Year of Creation: <%= movie.year_of_creation %></p>
-      <p>Genre: <%= movie.genres %></p>
+    <div class="movie" style="border-bottom: 1px solid #13131b;">
+      <h2 class="movie-name"><%= link_to movie.title, movie_path(movie) %></h2>
+      <div class="movie-poster">
+        <%= image_tag(movie.cover_image_url.presence || 'movie-poster-credits-178.jpg', alt: movie.title) %>
+      </div>
+      <div class="movie-info">
+        <p>Duration: <%= movie.duration %></p>
+        <p>Year of Creation: <%= movie.year_of_creation %></p>
+      </div>
     </div>
   <% end %>
 </div>

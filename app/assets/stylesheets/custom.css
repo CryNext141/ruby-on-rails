@@ -217,7 +217,8 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
 }
 
 .all-movie div{
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 .all-movie a{
     color: var(--p-title);
