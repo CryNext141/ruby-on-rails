@@ -1,0 +1,10 @@
+<h1 class="user-nick"><%= @user.nickname %></h1>
+
+<h2 class="page-title">Favorite Movies</h2>
+<ul>
+
+  <% @user.favorite_movies.each do |movie| %>
+    <li>
+      <%= link_to movie.title, movie_path(movie), class: 'search-m-title'%>
+    </li>  <% end %>
+</ul>

@@ -18,7 +18,15 @@
     <p>Year of Creation: <%= @movie.year_of_creation %></p>
     <p>Genre: <%= @movie.genres %></p>
   </div>
-
+  <% if current_user.favorite_movies.include?(@movie) %>
+    <div class="movie-e-button">
+      <%= link_to 'Remove from Favorites', remove_from_favorites_movie_path(@movie), method: :delete , class: 'edit-button'%>
+    </div>
+  <% else %>
+    <div class="movie-e-button">
+      <%= link_to 'Add to Favorites', add_to_favorites_movie_path(@movie), method: :post, class: 'edit-button' %>
+    </div>
+<% end %>
   <div class="movie-e-button">
     <%= link_to 'Edit', edit_movie_path(@movie), class: 'edit-button' %>
   </div>

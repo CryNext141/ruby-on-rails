@@ -13,11 +13,21 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  resources :users, only: [] do
+    get 'userpage', on: :member
+  end
+
+
   resources :movies do
     collection do
       get :omdb_search
       post :omdb_import
     end
+    member do
+      post 'add_to_favorites'
+      delete 'remove_from_favorites'
+    end
     resources :comments
   end
+
 end

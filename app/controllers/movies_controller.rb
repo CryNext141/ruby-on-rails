@@ -67,6 +67,18 @@ class MoviesController < ApplicationController
     end
   end
 
+  def add_to_favorites
+    @movie = Movie.find(params[:id])
+    current_user.favorite_movies << @movie
+    redirect_to @movie
+  end
+
+  def remove_from_favorites
+    @movie = Movie.find(params[:id])
+    current_user.favorite_movies.delete(@movie)
+    redirect_to @movie
+  end
+
   def omdb_search
     puts "Search query: #{params[:search_query]}"
     if params[:search_query].present?
@@ -81,6 +93,8 @@ class MoviesController < ApplicationController
 
     puts "Search result for view: #{@search_result}"
   end
+
+
 
   def omdb_import
     @omdb = OmdbClient.new

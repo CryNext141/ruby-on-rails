@@ -6,8 +6,11 @@
       <%= link_to 'Search OMDB', omdb_search_movies_path, class: "header-button-h" %>
       <%= link_to 'All Movies', movies_path, class: "header-button-h"%>
       <%= link_to 'Search Movie', search_movies_path, class: "header-button-h" %>
+        <%= link_to 'User Profile', userpage_user_path(current_user), class: "header-button-h" %>
 
-    <% else %>
+
+
+  <% else %>
       <%= link_to 'Sign In', new_user_session_path, class: "header-button-h" %>
     <% end %>
   </div>

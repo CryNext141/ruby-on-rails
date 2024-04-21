@@ -200,7 +200,9 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
     color: #0ab1b1;
 }
 
-
+.user-nick{
+    color: var(--text-color)
+}
 .movie-name p{
      color: var(--p-title);
 }
