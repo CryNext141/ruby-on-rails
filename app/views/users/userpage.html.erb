@@ -1,8 +1,62 @@
-<h1 class="user-nick"><%= @user.nickname %></h1>
+<style>
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    .inputfile + label {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+        background-color: black;
+        display: inline-block;
+    }
+    .inputfile:focus + label,
+    .inputfile + label:hover {
+        background-color: #6582FF;
+    }
+    .inputfile + label {
+        cursor: pointer;
+    }
+
+</style>
+
+<input type="file" name="file" id="file" class="inputfile" />
+
+<script>
+    document.getElementById('file').onchange = function() {
+        document.querySelector('label[for=file]').textContent = this.files[0].name;
+    };
+</script>
+
+
+
+<div class="user-profile">
+  <div class="user-info">
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar, class: "avatar" %>
+    <% else %>
+      <%= image_tag 'depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg', class: "avatar" %>
+    <% end %>
+    <h1 class="user-nick"><%= @user.nickname %></h1>
+  </div>
+  <div class="avatar-form">
+    <%= form_for @user, url: userpage_user_path(@user), html: { multipart: true, class: "avatar-form" }, method: :patch do |f| %>
+      <%= f.hidden_field :id, value: @user.id %>
+      <%= f.file_field :avatar, id: "file", class: "inputfile" %>
+      <label for="file">Choose The Image</label>
+      <%= f.submit 'Update Avatar', class: "update-avatar-btn" %>
+    <% end %>
+
+
+  </div>
+</div>
 
 <h2 class="page-title">Favorite Movies</h2>
 <ul>
-
   <% @user.favorite_movies.each do |movie| %>
     <li>
       <%= link_to movie.title, movie_path(movie), class: 'search-m-title'%>

@@ -1,6 +1,5 @@
 class MoviesController < ApplicationController
 
-  # GET /movies
   def index
     @movies = Movie.all
   end
@@ -13,19 +12,16 @@ class MoviesController < ApplicationController
     end
   end
 
-  # GET /movies/:id
   def show
     @movie = Movie.find(params[:id])
     # @omdb = OmdbClient.new
     # @omdb_movie = @omdb.search_by_title(@movie.title)
   end
 
-  # GET /movies/new
   def new
     @movie = Movie.new
   end
 
-  # POST /movies
   def create
     @movie = Movie.new(movie_params)
     if @movie.save
@@ -37,12 +33,10 @@ class MoviesController < ApplicationController
     end
   end
 
-  # GET /movies/:id/edit
   def edit
     @movie = Movie.find(params[:id])
   end
 
-  # PUT/PATCH /movies/:id
   def update
     @movie = Movie.find(params[:id])
     @movie.assign_attributes(movie_params)
@@ -54,8 +48,6 @@ class MoviesController < ApplicationController
     end
   end
 
-  # DELETE /movies/:id
-  # DELETE /movies/:id
   def destroy
     @movie = Movie.find(params[:id])
     if @movie.destroy
@@ -66,13 +58,11 @@ class MoviesController < ApplicationController
       redirect_to @movie
     end
   end
-
   def add_to_favorites
     @movie = Movie.find(params[:id])
     current_user.favorite_movies << @movie
     redirect_to @movie
   end
-
   def remove_from_favorites
     @movie = Movie.find(params[:id])
     current_user.favorite_movies.delete(@movie)
@@ -93,8 +83,6 @@ class MoviesController < ApplicationController
 
     puts "Search result for view: #{@search_result}"
   end
-
-
 
   def omdb_import
     @omdb = OmdbClient.new

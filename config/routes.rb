@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [] do
     get 'userpage', on: :member
+    patch 'userpage', to: 'users#update'
   end
+
 
 
   resources :movies do
