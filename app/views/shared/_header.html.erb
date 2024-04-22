@@ -6,13 +6,16 @@
       <%= link_to 'Search OMDB', omdb_search_movies_path, class: "header-button-h" %>
       <%= link_to 'All Movies', movies_path, class: "header-button-h"%>
       <%= link_to 'Search Movie', search_movies_path, class: "header-button-h" %>
-        <%= link_to 'User Profile', userpage_user_path(current_user), class: "header-button-h" %>
-
-
-
-  <% else %>
+      <%= link_to userpage_user_path(current_user), class: "header-button-h" do %>
+        <% if current_user.avatar.attached? %>
+          <%= image_tag current_user.avatar, class: "header-avatar" %>
+        <% else %>
+          <%= image_tag 'depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg', class: "header-avatar" %>
+        <% end %>
+        <span><%= current_user.nickname %></span>
+      <% end %>
+    <% else %>
       <%= link_to 'Sign In', new_user_session_path, class: "header-button-h" %>
     <% end %>
   </div>
-
 </div>

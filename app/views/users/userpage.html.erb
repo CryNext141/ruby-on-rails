@@ -1,39 +1,3 @@
-<style>
-    .inputfile {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
-    }
-    .inputfile + label {
-        font-size: 1.25em;
-        font-weight: 700;
-        color: white;
-        background-color: black;
-        display: inline-block;
-    }
-    .inputfile:focus + label,
-    .inputfile + label:hover {
-        background-color: #6582FF;
-    }
-    .inputfile + label {
-        cursor: pointer;
-    }
-
-</style>
-
-<input type="file" name="file" id="file" class="inputfile" />
-
-<script>
-    document.getElementById('file').onchange = function() {
-        document.querySelector('label[for=file]').textContent = this.files[0].name;
-    };
-</script>
-
-
-
 <div class="user-profile">
   <div class="user-info">
     <% if @user.avatar.attached? %>
@@ -47,11 +11,14 @@
     <%= form_for @user, url: userpage_user_path(@user), html: { multipart: true, class: "avatar-form" }, method: :patch do |f| %>
       <%= f.hidden_field :id, value: @user.id %>
       <%= f.file_field :avatar, id: "file", class: "inputfile" %>
-      <label for="file">Choose The Image</label>
+      <label for="file">Оберіть файл</label>
       <%= f.submit 'Update Avatar', class: "update-avatar-btn" %>
     <% end %>
-
-
+    <script>
+        document.getElementById('file').onchange = function() {
+            document.querySelector('label[for=file]').textContent = this.files[0].name;
+        };
+    </script>
   </div>
 </div>
 

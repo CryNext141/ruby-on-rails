@@ -178,6 +178,7 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
 .header-button-h:hover{
     color: #0ab1b1;
 }
+
 .page-title {
     font-size: 40px;
     color: #e2e1ef;
@@ -293,6 +294,13 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
     object-fit: cover;
 }
 
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .avatar-form {
     text-align: center;
 }
@@ -315,13 +323,36 @@ button.movie-import-btn, input.movie-import-btn[type="submit"] {
     margin-top: 5px;
     padding: 5px 10px;
     background-color: #6582FF;
-    color: white;
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .user-profile .update-avatar-btn:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #4164ef;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    font-size: 18px;
+    color: var(--text-color);
+    border-radius: 5px;
+    background-color: #6582FF;
+    display: inline-block;
+    padding: 2px 20px;
+    transition: background 0.3s;
+}
+.inputfile:focus + label,
+.inputfile + label:hover {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     background-color: #4164ef;
 }
