@@ -51,6 +51,7 @@ gem 'httparty'
 gem 'rails-ujs'
 gem 'webpacker'
 gem 'letter_opener'
+gem 'sidekiq'
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
